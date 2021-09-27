@@ -1,5 +1,8 @@
 import React from "react";
 import Header from "./success-header";
+import Paper from '@mui/material/Paper'
+import "./success-header"
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 
 export const SuccessPage = (props) => {
 
@@ -8,11 +11,16 @@ export const SuccessPage = (props) => {
   console.log(props.getLoanAppData());
 
   return (
+    
     <div>
+
       <Header></Header>
-
-      <div>Congrats {borrower}, you submitted the form successfully! </div>
-
+      <Paper elevation={3}>
+        <div className="congrats">Congrats {borrower}, you submitted the form successfully! 
+        <CheckCircleOutlineIcon/>
+        </div>
+      </Paper>
+     
     </div>
 
   );
